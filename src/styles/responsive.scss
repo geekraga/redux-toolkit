@@ -1,0 +1,20 @@
+// minimum content width when the window is less than 420px wide.
+$minContentWidth: 300px;
+
+// minimum content width when the window is less than 470px wide.
+$breakpointMin: 470px;
+
+// breakpoint set to 520px, after which the design for the application will adjust as per updated specs.
+$breakpointSmall: 520px;
+
+// breakpoint set to 620px, after which the design for the application will adjust as per updated specs.
+$breakpointMobile: 620px;
+
+// breakpoint set to 768px, after which the design for the application will adjust as per updated specs.
+$breakpointLarge: 768px;
+
+// content width when the window is less than 1100px wide.
+$breakpointDesktop: 991px;
+
+// content width when the window is less than 1100px wide.
+$middleContentWidth: 1100px;

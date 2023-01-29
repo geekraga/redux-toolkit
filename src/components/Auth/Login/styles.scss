@@ -1,0 +1,164 @@
+@import '../../../styles/color';
+@import '../../../styles/typography';
+@import '../../../styles/responsive';
+
+.boxContainer{
+  max-width: 400px;
+  min-width: 250px;
+  width: 85%;
+  height: auto;
+  position: absolute;
+  top: 12%;
+  left: 0;
+  right: 0;
+  margin: $loginLogHeight auto 20px;
+}
+
+.logoContainer {
+    background-image: url('../../public/logoWeb.png');
+    width: 260px;
+    height: 38px;
+    position: absolute;
+    top: -54px;
+    left: 50%;
+    margin-left: -130px;
+}
+
+.authFailContainer {
+  float:left;
+  width: 100%;
+  margin-top: 20px;
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.loginText{
+  font-size: 25px;
+  text-align: center;
+  margin: 0 0 10px 0;
+  color: $grey;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.emailTextContainer{
+  text-align: center;
+  border-bottom: 1px solid $grey;
+  line-height: 0.1em;
+  margin-top: 20px;
+  color: $grey;
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.emailText {
+  background: $white;
+  padding:0 10px;
+}
+
+.buttonsDiv {
+  text-align: center;
+  padding: 10px;
+  float:left;
+  width:100%;
+}
+
+.btn {
+  background: $btnColor;
+  color: $white;
+  padding: 7px;
+  border-radius: 2px;
+  width: 46%;
+  margin-left: 1%;
+  float: left;
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.hideButton {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0 !important;
+}
+
+
+.submitButton {
+  cursor: pointer;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: $lightBlueHeading;
+  margin: 40px 0 10px;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+
+.btnLogin{
+  margin: 25px 0 10px 0;
+}
+
+.btnFacebook {
+  width: 52%;
+  margin-right:1%;
+  margin-left: 0;
+}
+
+.btnGoogle {
+  background: $googleBtnBg;
+}
+
+.cookiesError {
+  position: fixed;
+  width: 100%;
+  background: $greyLight300;
+  padding: 8px;
+  color: $white;
+    a {
+      margin-left: 8px;
+      border-bottom: 1px solid;
+    }
+}
+
+.registerText {
+  color: $white;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.tosButton {
+  border-bottom: 1px solid;
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.privacyButton {
+  border-bottom: 1px solid;
+  margin-left: 4px;
+}
+
+@media (max-width: $breakpointSmall) {
+  .boxContainer {
+    top:8%;
+  }
+}
+

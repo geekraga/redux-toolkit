@@ -1,0 +1,638 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+@import '../../styles/typography';
+@import '../../styles/animation';
+
+.propertyBreadCrum {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+  position: relative;
+
+  .lineHoriontal {
+    position: absolute;
+    width: 145px;
+    background-color: $grey600;
+    height: 1px;
+    top: 15px;
+    left: 85px;
+    &:after, &:before {
+      content: "";
+      height: 5px;
+      width: 5px;
+      display: block;
+      position: absolute;
+      background: $grey600;
+      top: -2px;
+      border-radius: 50%;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+
+  & > div {
+    margin-right: 50px;
+    color: $greyLight700;
+    position: relative;
+
+    span {
+      background-image: url('../../public/propertyContent.png');
+      position: relative;
+      height: 26px;
+      width: 29px;
+      display: inherit;
+      left: 50%;
+      margin-left: -14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .detailsContent {
+    color: $blue500;
+  }
+
+  .detailsContentDone {
+    color: $success100;
+    span {
+      height: 33px;
+      width: 39px;
+      margin-left: -20px;
+      background-position: 0px -39px;
+      margin-top: -7px;
+    }
+  }
+
+  .videosContent {
+    span {
+      width: 32px;
+      margin-left: -16px;
+      background-position: -58px 0px;
+    }
+
+    .lineHoriontal {
+      left: 114px;
+      width: 120px;
+    }
+
+  }
+
+  .videosContentActive {
+    color: $blue500;
+    span {
+      height: 33px;
+      width: 46px;
+      background-position: -58px -45px;
+      margin-bottom: 0;
+    }
+  }
+
+  .videosContentDone {
+    color: $success100;
+    margin-top: -6px;
+    span {
+      height: 33px;
+      width: 46px;
+      background-position: -58px -84px;
+      margin-bottom: 7px;
+    }
+
+    .lineHoriontal {
+      margin-top: 6px;
+    }
+  }
+
+  .hostVideosContent {
+    span {
+      width: 32px;
+      margin-left: -16px;
+      background-position: 0 -92px;
+    }
+  }
+
+  .hostVideosContentActive {
+    color: $blue500;
+    span {
+      height: 34px;
+      background-position: -2px -137px;
+      margin-bottom: 0;
+    }
+  }
+
+  .hostVideosContentDone {
+    color: $success100;
+    span {
+      height: 34px;
+      background-position: -53px -136px;
+      width: 52px;
+      margin-bottom: 0px;
+    }
+  }
+
+}
+
+.propertyPublished {
+  position: relative;
+  font-family: 'Montserrat';
+  color: rgba(0, 0, 0, 0.87);
+  h2 {
+    color: $success100;
+    text-align: center;
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  h4 {
+    border-bottom: 1px solid $grey100;
+    color: $greyDark200;
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  p {
+    margin: 16px 0 10px 0;
+  }
+
+  .linkButton {
+    color: $bluedark200;
+    margin-left: 8px;
+    display: inline-block;
+    border-bottom: 1px solid;
+  }
+
+  .pairRokuContainer {
+    border: 1px solid $greyHard;
+    box-shadow: 0 0 10px rgba(162, 176, 200, 0.31);
+    border-radius: 4px;
+    padding: 4px 24px 18px 16px;
+    margin-top: 8px;
+    float: left;
+
+    .textBoxContainer {
+      display: inline-block;
+    }
+
+    .pairRokuContent {
+      font-weight:500;
+    }
+
+    .pairButton {
+      position: relative;
+      top: -5px;
+    }
+  }
+  .messageToShowResponse {
+    margin: 10px 0 20px 0;
+  }
+
+  .failure {
+    color: $error;
+  }
+
+  .success {
+    color: $success;
+  }
+}
+
+
+
+.contentContainer {
+  border: 1px solid lightgray;
+}
+
+.autoCompleteWrapper {
+  position: relative;
+  &:after {
+    content: "*";
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    color: $error;
+  }
+}
+
+.autoCompleteDisabled {
+  div, label, input {
+    cursor: not-allowed !important;
+  }
+  input {
+    background: $greyLight600;
+    pointer-events:none;
+    color: rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+.requiredFields {
+  position: relative;
+  &:after {
+    content: "*";
+    position: absolute;
+    right: 10px;
+    bottom: 35px;
+    color: $error;
+  }
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  text-align: right;
+
+  .cancelButtonLink {
+    text-transform: uppercase;
+    color: $greyDark500 !important;
+    font-size: 14px;
+    label, button {
+      background-color: $greyDark600 !important;
+      span {
+        color: $white !important;
+        font-weight: 400;
+      }
+    }
+    .cancelBtn {
+      display: block;
+    }
+  }
+
+  .btnSubDetails {
+    margin-left: 10px;
+    font-size: 14px;
+    label, button {
+      background-image: linear-gradient(to right, $orange100, $orange200) !important;
+    }
+    span {
+      color: $white !important;
+    }
+  }
+  .btnSubDetailsDisabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .btnSubmit {
+    display: none;
+  }
+}
+
+
+.contentHeader {
+  font-weight: 600;
+  padding-top: 28px;
+  font-size: 16px;
+  line-height: 16px;
+  position: relative;
+}
+
+.categoryContainer {
+  margin-bottom: 10px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.closeContainer {
+  text-align: left;
+  margin-top: 16px;
+}
+
+.hiddenVideoAssociated {
+  display: none;
+}
+
+.contentNameHeaders {
+  padding: 23px 20px 31px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: $grey600;
+  text-align: left;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.properyDetailsContainer {
+  position: relative;
+  .infoBox {
+    color: $greyHard300;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Montserrat;
+    position: relative;
+    line-height: 22px;
+    margin: 26px 0 6px 0;
+    min-height: 22px;
+  }
+  .locDeclinedBox {
+    padding-left: 20px;
+    position: relative;
+    i {
+      color: $orange400;
+      font-size: 14px;
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+  }
+  .enableLocationLink {
+    font-weight: 600;
+    border-bottom:1px solid;
+    color:$black400
+  }
+
+  .userChangedLocation {
+    &:hover {
+      background: $blue600;
+      color: $white;
+      border-color: $blue600;
+      i {
+        color: $white;
+      }
+    }
+
+    padding: 8px 12px 8px 32px;
+    position: relative;
+    border: 1px solid $greyLight1000;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 18px;
+    cursor: pointer;
+
+    i {
+      color: $orange400;
+      font-size: 14px;
+      position: absolute;
+      left: 11px;
+      top: 12px;
+    }
+  }
+
+}
+
+.mainContainerRecommended {
+  position: relative;
+}
+
+.videosContainer {
+  position: relative;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  .noRecommendedVideoLink {
+    cursor: pointer;
+    color: $blue500;
+    border-bottom: 1px solid;
+    padding: 0;
+    font-weight: 300;
+  }
+}
+
+.categoryMenu {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+
+  div {
+    border: 2px solid $greyDark700;
+    letter-spacing: 0.8px;
+    border-radius: 19px;
+    color: $greyDark800;
+    padding: 10px 20px;
+    margin-left: 12px;
+    cursor: pointer;
+
+    &.activeList {
+      background-color: $blue600;
+      color: $white;
+      border-color: $blue600;
+      cursor: default;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+.errorMessage {
+  color:$error;
+  margin: 10px 0 0 0;
+}
+
+.videoMenu {
+  margin-top: 30px;
+  .accurateAddressWarning {
+    color: $greyHard300;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 36px;
+    position: relative;
+    img {
+      position: absolute;
+      left: 16px;
+      top: 4px;
+    }
+  }
+  .videoContentContainer {
+    margin-bottom: 20px;
+    .thumbnailContainer {
+      position: relative;
+      margin: 0 0 15px 0;
+      img {
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+        border-radius: 8px;
+      }
+
+      .playContainer, .playContainerOverlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      .playContainerOverlay {
+        background: rgba(0,0,0,.15);
+      }
+
+      .videoPlay {
+        color: $white;
+        position: absolute;
+        font-size: 40px;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+      }
+    }
+    .videoDetails {
+      padding-left: 32px;
+      position: relative;
+      cursor: pointer;
+      i {
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        border: 1px solid $greyLight900;
+        border-radius: 50%;
+        top: 6px;
+        left: 2px;
+      }
+      div, p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      div {
+        color: $greyDark200;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 17px;
+      }
+
+      p {
+        color: $greyLight800;
+        font-weight: 500;
+        font-size: 13px;
+        margin-top: 4px;
+      }
+
+      &.selectedVideo {
+        i {
+          border: 1px solid $green100;
+          background: $green100;
+          &:after {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 12px;
+            border: solid $white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            position: relative;
+            left: 5px;
+            top: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.recommendTextContent {
+  font-style: italic;
+  padding-top: 14px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+@media (max-width: $breakpointLarge) {
+  .closeContainer {
+    margin: 0;
+    padding: 16px 0 16px 18px;
+  }
+}
+
+@media (max-width: $breakpointMobile) {
+  .propertyBreadCrum {
+    & > div {
+      width: 100px;
+    }
+    .lineHoriontal {
+      left: 72px;
+      width: 90px;
+    }
+
+    .videosContent {
+      .lineHoriontal {
+        left: 80px;
+        width: 100px;
+      }
+    }
+  }
+
+  .propertyPublished {
+    .pairRokuContainer {
+      padding-top: 20px;
+      padding-bottom: 0;
+
+      .textBoxContainer {
+        display: block;
+      }
+      .pairTextBox {
+        margin-left: 0 !important;
+        margin-bottom: 16px;
+      }
+
+      .pairButton {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpointSmall) {
+  .propertyBreadCrum {
+    justify-content: flex-start;
+    & > div {
+      width: auto;
+      margin: 0;
+      text-align: center;
+      font-size: 13px;
+    }
+    .lineHoriontal {
+      display: none;
+    }
+
+    .videosContent {
+        margin-right: 0;
+    }
+  }
+
+  .categoryContainer {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .buttonContainer {
+    .btnSubDetails, .cancelButtonLink {
+      float: left;
+      width: 100%;
+      margin-bottom: 10px;
+      margin-left: 0;
+    }
+  }
+
+  .categoryMenu {
+    div {
+      padding: 5px;
+      margin-left: 5px;
+    }
+  }
+}

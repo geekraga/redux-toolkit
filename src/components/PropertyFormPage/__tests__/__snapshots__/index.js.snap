@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectPropertyComponent should render RecommendedVideos Component only 1`] = `
+<SelectPropertyVideos
+  categoryIdFilter={null}
+  fetchVideos={[Function]}
+  hideRecommendedVideos={[Function]}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": Object {
+        "cancel": "cancel",
+      },
+      "now": [Function],
+      "textComponent": "span",
+    }
+  }
+  loadPropertyDetails={[Function]}
+  populateData={[Function]}
+  previewContent={[Function]}
+  propertyInfo={Object {}}
+  showLoader={false}
+  showRecommended={true}
+  uploadPropertyData={[Function]}
+/>
+`;

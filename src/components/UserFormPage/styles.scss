@@ -1,0 +1,151 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.userDetailsContainer {
+  box-shadow: 0 0 2px rgba(0,0,0,.35);
+}
+
+.userDetailsHeader {
+  background: $grey300;
+  font-weight: 600;
+  padding: 10px 0 12px 20px;
+}
+
+.formContainer {
+  padding:0 20px;
+}
+
+.btnSubmit {
+  display: none;
+}
+
+.btnSubDetails{
+  margin-left: 10px;
+  position: relative;
+}
+
+.btnCancel{
+  bottom: 20px;
+  right: 2%;
+  top: 10px;
+  padding-left: 3%;
+  padding-right: 3%;
+  position: relative;
+}
+
+.passwordFailContainer{
+  font-size: 14px;
+  float: left;
+  width: 100%;
+  margin: 20px 0 -5px;
+  color:$error;
+  font-weight: 500;
+}
+
+.passwordSuccessContainer{
+  font-size: 14px;
+  float: left;
+  width: 100%;
+  margin: 20px 0 -5px;
+  color:$success;
+  font-weight: 500;
+}
+
+.userPicContainer {
+  text-align: center;
+  padding-top: 20px;
+  .userProfilePic {
+    max-width: 100%;
+    vertical-align: middle;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    border: 5px solid #f5f5f5;
+    max-height: 125px;
+  }
+}
+
+.tagHeader {
+  font-weight: 500;
+  margin: 15px 0px 0 0;
+}
+
+.requiredFields {
+  position: relative;
+  &:after {
+    content: "*";
+    position: absolute;
+    right: 10px;
+    bottom: 35px;
+    color: $error;
+  }
+}
+
+.buttonContainer {
+  margin-top: 20px;
+}
+
+.cancelButtonLink {
+    display: inline-block;
+    height: 36px;
+    position: relative;
+    width: 120px;
+}
+
+.cancelBtn {
+  background: $white;
+  color: rgba(0, 0, 0, 0.870588);
+  text-transform: uppercase;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 2px;
+  padding: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.autoCompleteWrapper {
+  position: relative;
+  &:after {
+    content: "*";
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    color: $error;
+  }
+}
+
+.autoCompleteDisabled {
+  div, label, input {
+    cursor: not-allowed !important;
+  }
+  input {
+    background: $greyLight600;
+    pointer-events:none;
+    color: rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+@media (max-width: $breakpointSmall) {
+    .btnSubDetails, .cancelButtonLink {
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    .cancelButtonLink > div {
+        min-width: 100% !important;
+    }
+
+    .cancelBtn {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-right: 0;
+      margin-top: 10px;
+    }
+}

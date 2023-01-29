@@ -1,0 +1,45 @@
+@import '../../styles/color';
+
+.userDetailsContainer {
+  box-shadow: 0 0 2px rgba(0,0,0,.35);
+}
+
+.userDetailsHeader {
+  background: $grey300;
+  font-weight: 600;
+  padding: 10px 0 12px 20px;
+}
+
+.formContainer {
+  padding:0 20px;
+}
+
+.btnSubmit {
+  display: none;
+}
+
+.btnDetails {
+  margin: 12px 0 22px;
+  position: relative;
+  min-width: 180px !important;
+  width: 100%;
+  box-shadow: none !important;
+}
+
+.passwordFailContainer{
+  font-size: 14px;
+  float: left;
+  width: 100%;
+  margin: 20px 0 -5px;
+  color:$error;
+  font-weight: 600;
+}
+
+.passwordSuccessContainer{
+  font-size: 14px;
+  float: left;
+  width: 100%;
+  margin: 20px 0 -5px;
+  color:$success;
+  font-weight: 600;
+}

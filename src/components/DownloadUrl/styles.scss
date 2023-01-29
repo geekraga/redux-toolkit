@@ -1,0 +1,129 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.downLoadVideo {
+    position: relative;
+    margin: 0;
+    height: 100%;
+    &:hover .VideoContent{
+        opacity: 0.8;
+    }
+}
+
+.VideoContent {
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.thumbnailContainer {
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+
+.thumbnailDownloader {
+  float: right;
+  margin-right: 28px;
+  position: relative;
+}
+
+.thumbnail {
+  vertical-align: top;
+  width: 50%;
+}
+
+.videoText {
+  width: 50%;
+  position: absolute;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #00bcd4;
+  padding: 8px 0px 8px 10px;
+  margin: 0 0 0 25%;
+}
+
+
+.thumbnailDownloadContainer {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  &:hover .downloadContainer{
+    opacity: 0.6;
+  }
+}
+
+.downloadThumbnail {
+  height: 100%;
+}
+
+.downloadContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: $white;
+  opacity: 0;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  text-align: center;
+  cursor: pointer;
+}
+
+.videoContentButton {
+  background: $lightBlueHeading;
+  color: $white;
+  border-radius: 4px;
+  padding: 8px;
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.downloadContentContainer {
+  position: relative;
+  min-height: 100px;
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+  z-index: 1501;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+@media (max-width: $breakpointSmall) {
+  .thumbnail {
+    width: 100%;
+  }
+
+  .videoText {
+    width: 100%;
+    margin: 0;
+  }
+}

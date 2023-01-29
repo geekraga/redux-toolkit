@@ -1,0 +1,47 @@
+%animationBounce {
+    -webkit-animation: skBounce 2.0s infinite ease-in-out;
+    animation: skBounce 2.0s infinite ease-in-out;
+}
+
+%animationDelay {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes skBounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes skBounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+
+%animationCircle {
+  -webkit-animation: animateCircle 2s;
+  animation: animateCircle 2s;
+}
+
+@-webkit-keyframes animateCircle {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes animateCircle {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}

@@ -1,0 +1,380 @@
+@import '../../../styles/color';
+@import '../../../styles/responsive';
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+.slideCreator {
+  height: 100%;
+}
+
+.snapShotOuter {
+  position: relative;
+  height: 42%;
+  width: 96%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  img.bgImages {
+    max-width: 100%;
+    position: absolute;
+    height: 100%;
+  }
+
+  .changeBgImage {
+    min-width: 48px !important;
+    height: 49px !important;
+    border-radius: 0px !important;
+    border: 0 !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .mainContent {
+    padding: 0 1rem;
+    height: 100%;
+  }
+
+  .leftContent {
+    display: none;
+  }
+
+  .rightContent {
+    padding-top: 20px;
+    height: 100%;
+  }
+  .bgOpacity {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+  }
+
+  .slideInputs {
+    &:last-child {
+      margin-bottom: 0;
+    }
+    border: 1px dashed $white;
+    color: $white;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    font-family: inherit !important;
+    hr {
+      display: none;
+    }
+    div, input, textarea {
+      color: inherit !important;
+      -webkit-text-fill-color: inherit !important;
+    }
+  }
+}
+
+.addDeleteButtonContainer {
+  margin-top: 20px;
+
+  .imageHintTextContent {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  i {
+    color: $orange200;
+    cursor: pointer;
+  }
+  .addButton {
+    margin-right: 10px;
+  }
+  .disabledButton {
+    color: $grey100;
+    pointer-events: none;
+  }
+}
+
+.hideButton {
+  display: none;
+}
+
+
+.snapshot_1 {
+  .leftContent {
+    display: block;
+    padding-top: 80px;
+  }
+}
+.snapshot_2 {
+  .userUploaded {
+    display: none;
+  }
+
+  img.bgImages {
+    max-height: 500px;
+  }
+
+  .rightContent {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-top: 50px;
+  }
+
+}
+.snapshot_3 {
+  .rightContent {
+    flex-basis: 100%;
+    max-width: 100%;
+    .descriptionField {
+      width: 50% !important;
+      margin-left: 25%;
+    }
+  }
+  .changeBgImage {
+    margin-bottom: 12%!important;
+  }
+}
+.snapshot_4 {
+  .rightContent {
+    flex-basis: 100%;
+    max-width: 100%;
+
+    .descriptionField {
+      width: 50% !important;
+      margin-left: 25%;
+    }
+  }
+
+  .changeBgImage {
+    margin-top: 15px !important;
+  }
+}
+.snapshot_5 {
+  .leftContent {
+    display: block;
+  }
+  .rightContent {
+    padding-top: 20%;
+    padding-left: 0%;
+    padding-right: 0;
+
+    .additionalContent {
+      background: rgba(0,0,0,0.4);
+      padding: 24px 2rem 16px 2rem;
+      position: relative;
+    }
+  }
+
+  .changeBgImage {
+    position: absolute !important;
+    left: 50%;
+    margin-left: -24px !important;
+    top: 50px;
+  }
+}
+
+.btnSubDetails {
+  margin-left: 16px;
+  font-size: 14px;
+  label, button {
+    background-image: linear-gradient(to right, $orange100, $orange200) !important;
+  }
+  span {
+    color: $white !important;
+  }
+}
+
+
+
+.dialogHeaderStyle {
+  padding: 18px !important;
+  font-size: 22px !important;
+  font-family: 'Montserrat' !important;
+  background: $grey300;
+}
+
+.cropImageButton {
+  position: absolute;
+  right: 30px;
+  top: 12px;
+  font-size: 14px;
+  label, button {
+    background-image: linear-gradient(to right, $orange100, $orange200) !important;
+  }
+  span {
+    color: $white !important;
+  }
+}
+
+.dialogContentClass {
+  width: 90% !important;
+  max-width: 90% !important;
+}
+
+.buttonContainer {
+  float: right;
+  text-align: center;
+  margin-right: 15px;
+
+  .leftButton {
+    text-transform: uppercase;
+    font-size: 14px;
+    label, button {
+      background-color: $greyDark600 !important;
+      span {
+        color: $white !important;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .cancelButtonLink {
+    text-transform: uppercase;
+    font-size: 14px;
+    label, button {
+      background-color: $greyDark600 !important;
+      span {
+        color: $white !important;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpointLarge) {
+  .slideCreator {
+    margin-bottom: 36px;
+  }
+  .snapShotOuter {
+    height: 270px;
+    width: 480px;
+    box-shadow: 0 0 10px rgba(143,139,167,.27);
+    border-radius: 4px;
+
+    img.bgImages {
+      border-radius: 4px;
+    }
+  }
+
+  .snapshot_2 {
+    .rightContent {
+      padding-top: 30px;
+    }
+
+  }
+
+  .snapshot_3 {
+    .changeBgImage {
+      margin-bottom: 12%!important;
+    }
+  }
+
+  .snapshot_5 {
+    .rightContent {
+      padding-top: 15%;
+      .additionalContent {
+        padding: 16px 2rem 16px;
+      }
+
+      .slideInputs {
+        margin-bottom: 12px;
+        font-size: 14px !important;
+        line-height: 18px !important;
+      }
+    }
+
+    .changeBgImage {
+      top: 12px;
+    }
+  }
+}
+
+@media (max-width: $breakpointMobile) {
+  .snapShotOuter {
+    width: 420px;
+    height: 250px;
+  }
+
+  .snapshot_3 {
+    .changeBgImage {
+      margin-bottom: 26px!important;
+    }
+    .rightContent {
+      .descriptionField {
+        width: 70%!important;
+        margin-left: 15%;
+      }
+    }
+  }
+
+  .snapshot_4 {
+    .rightContent {
+      .descriptionField {
+        width: 70%!important;
+        margin-left: 15%;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpointSmall) {
+  .snapShotOuter {
+    width: 320px;
+    height: 190px;
+  }
+
+  .snapshot_3 {
+    .changeBgImage {
+      margin-bottom: 4px!important;
+    }
+  }
+
+
+  .snapshot_5 {
+    .changeBgImage {
+      top: 5px;
+    }
+    .leftContent {
+      display: none;
+    }
+
+    .rightContent {
+      flex-basis: 100%;
+      max-width: 100%;
+      .additionalContent {
+        padding: 6px 1rem;
+        margin-left: 22%;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpointMin) {
+  .buttonContainer {
+    width: 100%;
+    text-align: left;
+    margin: 18px 0 22px;
+  }
+
+  .snapShotOuter {
+    width: 290px;
+    height: 180px;
+
+    .slideInputs {
+      font-size: 14px !important;
+      line-height: 22px !important;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import '../../../styles/color';
+@import '../../../styles/responsive';
+
+.mainContainer {
+  position: relative;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  color: $grey;
+}
+
+.maxLocalError {
+  font-size: 14px;
+  float: left;
+  width: 100%;
+  color:$error;
+  font-weight: 500;
+}
+
+.contentContainer {
+  border: 1px solid $grey100;
+  border-radius: 2px;
+  margin: 10px 0 5px 0;
+  padding: 0px 0 10px 0;
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+.deleteVideoContent {
+  position: absolute;
+  margin: 15px 0 0 15px;
+}
+
+.paddingRight{
+  padding-right: 80px;
+}
+
+.toggleContent {
+  color: #1e88e5;
+}
+
+
+@media (max-width: $breakpointLarge) {
+  .toggleContainer {
+    margin-top: 25px!important;
+  }
+
+  .floatingActionButton {
+      right: 0 !important;
+  }
+}

@@ -1,0 +1,15 @@
+@import "~react-crop/cropper.css";
+
+.resize-handle {
+  background-color: #000000;
+  border: #000000 solid 1px;
+  border-radius: 50%;
+}
+
+.Cropper-box {
+  border: 2px solid #000000;
+}
+
+.DraggableResizable-top, .DraggableResizable-left, .DraggableResizable-bottom, .DraggableResizable-right {
+  background-color: rgba(0,0,0,.4);
+}

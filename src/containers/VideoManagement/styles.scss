@@ -1,0 +1,46 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.videoManager {
+  position: relative;
+
+  .floatingButtonContainer {
+    display: inline-block;
+  }
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+.noContentAvailable {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.addVideo {
+    display: inline;
+    margin: 0 4px;
+    color: $blue400;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+@media (max-width: $breakpointSmall) {
+  .floatingActionButton {
+    right: 0 !important;
+  }
+}

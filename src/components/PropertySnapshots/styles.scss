@@ -1,0 +1,19 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.snapContainer {
+  margin-top: 20px;
+  font-family: 'Montserrat';
+
+    .slideThumbnails {
+        max-height: 500px;
+        overflow: auto;
+    }
+}
+
+@media (max-width: $breakpointLarge) {
+    .slideThumbnails {
+        margin-bottom: 35px;
+    }
+}
+

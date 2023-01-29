@@ -1,0 +1,91 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.deleteImageContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  text-align: center;
+  cursor: pointer;
+}
+
+.imageContainer {
+  margin: 25px 15px 10px 15px;
+}
+
+.thumbnailUploadBtn {
+    box-shadow : none !important;
+    margin-bottom: 10px;
+}
+
+.thumbnailContainer {
+    position: relative;
+}
+
+.thumbnailSelect {
+  font-size: 16px;
+  height: 44px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.hideButton {
+    display: none;
+}
+
+.buttonContainer {
+  position: absolute;
+  z-index: 10;
+  width: 210px;
+  left: calc(50% - 105px);
+  background: rgba(0,0,0,.3);
+  padding: 4px 0px 4px 4px;
+}
+
+.customButton {
+  color: $white !important;
+  font-size: 36px !important;
+  cursor: pointer;
+  text-shadow: rgb(0, 0, 0) 0px 1px 5px;
+  float: left;
+}
+
+.customDownloadButton {
+  color: $white !important;
+  position: absolute!important;
+  font-size: 36px!important;
+  top: 12px;
+  left: 50%;
+  margin-left: -18px;
+  z-index: 10;
+  cursor: pointer;
+  text-shadow: rgb(0, 0, 0) 0px 1px 5px;
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+  z-index: 2001;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+@media (max-width: $breakpointSmall) {
+  .thumbnailSelect {
+    font-size: 15px;
+    height: 40px;
+    margin-left: 0;
+  }
+}

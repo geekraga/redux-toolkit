@@ -1,0 +1,14 @@
+@import '../../styles/color';
+
+.mainContainer {
+  background: $white;
+  margin-top: -14px;
+  padding: 24px 2rem 24px 2rem;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 14px;
+  }
+}
+

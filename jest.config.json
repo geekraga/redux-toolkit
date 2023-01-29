@@ -1,0 +1,11 @@
+{
+    "snapshotSerializers": [
+        "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+        "^(?!-!).+\\.(css|scss)$": "<rootDir>/__mocks__/identity-module.js",
+        "^(?!-!).+\\.(jpg|png|gif|svg)$": "<rootDir>/__mocks__/empty-module.js",
+        "^-!babel-loader!svg-react-loader!": "<rootDir>/__mocks__/react-component.js",
+        "^redux-oidc$": "<rootDir>/__mocks__/redux-oidc.js"
+    }
+}

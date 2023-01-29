@@ -1,0 +1,406 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.videoSlider {
+  padding: 0 4rem;
+  margin-top: 40px;
+}
+
+.sliderHeader {
+  font-size: 20px;
+  font-weight: 500;
+  color: $bluedark200;
+  letter-spacing: .5px;
+  width: 100%;
+  padding-right: 1rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.categoryVideos {
+  font-weight: 400;
+  color: $greyDark100;
+  margin-left: 8px;
+}
+
+.hideContent {
+  display: none !important;
+}
+
+.videoDetailsContainer {
+  padding-top: 16px;
+  position: relative;
+}
+
+.videoTitle {
+  font-size: 16px;
+  color: $greyDark200;
+  margin-top: 16px;
+  max-width: 100%;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+.thumbnailContainer {
+  position: relative;
+  margin: 0;
+}
+
+.playContainer, .playContainerOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.playContainerOverlay {
+  background: rgba(0,0,0,.25);
+}
+
+.playIcon {
+  color: $white;
+  position: absolute;
+  font-size: 40px;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+.mobileVideoWrapper {
+  display: none;
+}
+
+.iconNavigate {
+  color: $greyDark300;
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+}
+
+.videoContentClass {
+  width: 90% !important;
+  max-width: 90% !important;
+}
+
+.videoBody {
+  font-family: 'Montserrat';
+  position: relative;
+  min-height: 300px;
+  padding: 0!important;
+  border: 0 !important;
+}
+
+.closeVideoDialog {
+  position: absolute;
+  color: $white;
+  font-size: 26px;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+  background: rgba(33,33,33,.8);
+  border-radius: 40px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.videoDialogTitle {
+  font-size: 20px;
+  color: $greyDark200;
+  padding: 25px 2rem 15px;
+  font-weight: 400;
+}
+
+.videoDialogDetails {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: $greyLight400;
+  padding: 0 2rem 12px;
+}
+
+.playerWrapper > div {
+  max-height: 500px;
+}
+
+.contactDetails {
+  padding: 0 2rem 35px;
+  color: $greyDark200;
+}
+
+.phoneInfo {
+  padding-bottom: 4px;
+  font-weight: 400;
+}
+
+.infoLink {
+  color: $bluedark200;
+  margin-left: 8px;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 1px solid;
+  }
+}
+
+.websiteInfo {
+  font-weight: 300;
+  font-size: 14px;
+  text-align: right;
+
+  .websiteInfoText {
+    margin-left: 8px;
+  }
+}
+
+.scrollButton {
+  background-image: linear-gradient(to right, $orange100, $orange200);
+  bottom: 150px;
+  cursor: pointer;
+  height: 30px;
+  position: fixed;
+  right: 12px;
+  text-align: center;
+  width: 36px;
+  color: #fff;
+  border-radius: 4px;
+  padding-top: 2px;
+  z-index: 1;
+}
+
+.mobilePlayerOuter {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  margin: 0;
+  position: fixed;
+  background: rgba(0,0,0,.50);
+}
+
+.jwPlayerMobileWrapper {
+  position: relative;
+  height: 100%;
+  & > div {
+    position: relative;
+    top: 0;
+  }
+}
+
+
+@media (max-width: $breakpointDesktop) {
+  .playerWrapper > div {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: $breakpointLarge) {
+  .videoDialogTitle, .videoDialogDetails, .propertyVideoContainer, .phoneInfo, .websiteInfo, .contactDetails {
+    display: none;
+  }
+
+  .videoBody, .playerWrapper > div {
+    min-height: 250px;
+  }
+
+  .mobileVideoWrapper {
+    display: block;
+    padding: 0 4rem;
+    position: relative;
+    background: $white;
+
+    .videoContentContainer {
+      margin-bottom: 20px;
+    }
+    .thumbnailContainer {
+      position: relative;
+      margin: 0;
+      img {
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+      }
+    }
+
+    .videoPlay {
+      color: $white;
+      position: absolute;
+      font-size: 30px;
+      top: calc(50% - 15px);
+      left: calc(50% - 15px);
+    }
+
+    .videoTitle {
+      font-size: 18px;
+      color: $greyDark200;
+      text-transform: capitalize;
+      padding: 0 80px 4px 0;
+      margin-top: 0;
+      font-weight: 400;
+      font-family: 'Montserrat';
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+
+    .videoDescription {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.4;
+      color: $greyLight400;
+      font-family: 'Montserrat';
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 100%;
+      margin-top: 4px;
+
+      &:first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    .mobileContactDetails {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.4;
+      color: $greyLight400;
+      font-family: 'Montserrat';
+      margin-top: 6px;
+      i {
+        position: absolute;
+      }
+      a, span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+        display: block;
+        padding-left: 35px;
+        padding-top: 1px;
+      }
+    }
+
+    .creditsDetails {
+      font-size: 14px;
+      i {
+        font-size: 20px;
+      }
+      span {
+        padding-left: 30px;
+        padding-top: 2px;
+      }
+    }
+
+    .detailsButton {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      z-index: 0;
+      color: $bluedark200;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 1px solid;
+      }
+    }
+
+    .mobileHeader {
+      position: relative;
+      box-shadow: 0 9px 27px 0 rgba(143,139,167,.27);
+      border-radius: 6px;
+      background: $white;
+      top: -12px;
+      width: 100%;
+      margin-bottom: 10px;
+      &:after {
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+      }
+    }
+
+    .mobileHeadOptions {
+      font-size: 12px;
+      letter-spacing: .9px;
+      color: $greyDark400;
+      float: left;
+      text-align: center;
+      position: relative;
+      padding: 20px 0;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .activeOption {
+      padding-bottom: 15px;
+      color: $bluedark200;
+      &:after {
+        content: "";
+        height: 5px;
+        background-color: $bluedark200;
+        position: absolute;
+        width: 40%;
+        bottom: -5px;
+        left: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpointMobile) {
+  .mobileVideoWrapper {
+    .mobileHeadOptions {
+      width: 100% !important;
+      font-size: 14px;
+      padding: 10px 0;
+        &:after {
+            content: "";
+            height: 2px;
+            bottom: 0;
+            width: 50%;
+            left: 25%;
+            position: absolute;
+            background-color: $greyDark400;
+        }
+    }
+
+    .activeOption {
+        &:after {
+            background-color: $bluedark200;
+            width: 66%;
+            left: 17%;
+        }
+    }
+  }
+}
+
+
+@media (max-width: 420px) {
+  .mobileVideoWrapper {
+    .videoTitle {
+      font-size: 15px;
+    }
+
+    .videoDescription, .mobileContactDetails {
+      font-size: 13px;
+    }
+
+    .detailsButton {
+      font-size: 12px;
+    }
+
+    .mobileHeadOptions {
+      font-size: 12px;
+      padding-bottom: 6px;
+    }
+  }
+}

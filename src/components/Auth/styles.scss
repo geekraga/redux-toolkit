@@ -1,0 +1,183 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.hideButton {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+
+.mgTop {
+  margin:20px 0 10px 0;
+}
+
+.forgotPassMessage {
+  margin: 20px 0 0px 0;
+}
+
+.emailFailed {
+  color:$error;
+  margin: 10px 0 0 0;
+}
+
+.registerError {
+  color:$error;
+  margin: 15px 0 5px 0;
+}
+
+.logoSmallContainer {
+  background-image: url('../../public/logoSmall.png');
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.customContainer {
+  box-shadow: none;
+  position: relative;
+}
+
+.registerContainer {
+  width: 85%;
+  max-width: 500px;
+  height: auto;
+  position: absolute;
+  top: 15%;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  min-width: 250px;
+}
+
+.userRegistered {
+  font-size: 16px;
+  float: left;
+  width: 100%;
+  margin: 10px 0 -5px;
+  color:$success;
+}
+
+.userVerifiedSuccess {
+  font-size: 16px;
+  float: left;
+  width: 100%;
+  margin: 20px 0;
+  color:$success;
+}
+
+.userVerifiedFailed {
+  font-size: 16px;
+  float: left;
+  width: 100%;
+  margin: 20px 0;
+  color:$error;
+}
+
+.centerLogoContainer {
+  background-image: url('../../public/logoSmall.png');
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  margin-left: -30px;
+}
+
+.infoIcon {
+  position: absolute !important;
+  margin-left: 8px;
+  color: $grey700 !important;
+  z-index: 2;
+}
+
+.textContainer {
+  position: relative;
+}
+
+
+.submitButton {
+  cursor: pointer;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: $lightBlueHeading;
+  margin: 40px 0 10px;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.submitForgotButton {
+  cursor: pointer;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: $lightBlueHeading;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  text-transform: uppercase;
+  min-width: 88px;
+  float: right;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.registerText {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.tosButton {
+  border-bottom: 1px solid;
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.privacyButton {
+  border-bottom: 1px solid;
+  margin-left: 4px;
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+@media (max-width: $breakpointSmall) {
+  .registerContainer {
+    top:8%;
+    margin-bottom: 20px;
+  }
+}
+

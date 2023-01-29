@@ -1,0 +1,110 @@
+@import '../../../styles/color';
+@import '../../../styles/responsive';
+
+.geoContainer {
+  padding-bottom : 20px;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  color: $grey;
+}
+
+.requiredFields {
+    position: relative;
+    &:after {
+        content: "*";
+        position: absolute;
+        right: 10px;
+        bottom: 35px;
+        color: $error;
+    }
+}
+
+.regionWrapper {
+  position: relative;
+  padding-right: 20px;
+  i {
+    right: -10px !important;
+  }
+}
+
+.textContainers {
+  padding-top: 42px;
+}
+
+.latContent {
+  margin-right: 8px;
+}
+
+.contentColor {
+  color: rgba(0, 0, 0, 0.6);
+  margin-right: 4px;
+}
+
+.expiryDateError {
+  color: $error;
+  font-size: 12px;
+  float: left;
+}
+
+.dateContainer {
+  padding-top : 10px;
+}
+
+.datePickerMain {
+  position: relative;
+  float: left;
+  width: 94%;
+}
+
+.datePickerWrapContent > div {
+  width: 100% !important;
+}
+
+
+.autoCompleteWrapper {
+    position: relative;
+    &:after {
+        content: "*";
+        position: absolute;
+        right: 20px;
+        top: 24px;
+        color: $error;
+    }
+}
+
+.autoCompleteDisabled {
+    div, label, input {
+        cursor: not-allowed !important;
+    }
+    input {
+        background: #dddddd;
+        pointer-events:none;
+    }
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+  z-index: 5000;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+
+@media (max-width: $breakpointLarge) {
+  .textContainers {
+    padding-top: 15px;
+  }
+}

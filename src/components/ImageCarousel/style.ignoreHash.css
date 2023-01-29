@@ -1,0 +1,59 @@
+@import '~react-image-gallery/styles/css/image-gallery.css';
+
+.image-gallery-swipe .image-gallery-image img {
+    height: 250px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-gallery-thumbnails .image-gallery-thumbnails-container img {
+    height: 50px;
+}
+
+.image-gallery-left-nav, .image-gallery-right-nav {
+    padding: 10px 15px;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+.image-gallery-slide {
+  overflow: hidden;
+}
+
+.image-gallery-slide img {
+    height: 250px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-gallery-fullscreen-button::before, .image-gallery-play-button::before, .image-gallery-left-nav::before, .image-gallery-right-nav::before {
+    color: #9e9e9e;
+}
+
+.image-gallery-bullets .image-gallery-bullet.active {
+    background: #9e9e9e;
+    border-color: #9e9e9e;
+}
+
+@media (max-width: 768px) {
+    .image-gallery-swipe .image-gallery-image img {
+        width: 100%;
+        height: inherit;
+        min-height: 160px;
+    }
+
+    .image-gallery-fullscreen-button, .image-gallery-play-button {
+        bottom: 24px;
+    }
+}
+
+@media (max-width: 520px) {
+    .image-gallery-fullscreen-button, .image-gallery-play-button {
+        bottom: 0px;
+    }
+    .image-gallery-bullets-container {
+        display: none;
+    }
+}

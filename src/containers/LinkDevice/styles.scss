@@ -1,0 +1,169 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.mainContainer {
+  position: relative;
+}
+
+.noContentAvailable {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.addVideo {
+  display: inline;
+  margin: 0 4px;
+  color: $blue400;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.itemKeyword {
+  color: rgba(0, 0, 0, 0.87);
+  margin-top: 10px;
+}
+
+.failure {
+  color: $error;
+}
+
+.success {
+  color: $success;
+}
+
+.messageToShowResponse {
+  margin: 20px 0 -8px 0;
+}
+
+.iconClass {
+  margin: 0px 4px 0 4px;
+  position: relative;
+  top: 4px;
+}
+
+.contentTable {
+  border: 1px solid $grey400;
+  border-bottom: 0;
+  border-right: 0;
+  width: 100%;
+  margin: 10px 0;
+  background: $white;
+  color: rgba(0, 0, 0, 0.87);
+  td {
+    padding: 4px 0 4px 16px;
+  }
+}
+
+.leftRow {
+  border-right: 1px solid $grey400;
+  border-bottom: 1px solid $grey400;
+}
+
+.rightRow {
+  border-right: 1px solid $grey400;
+  border-bottom: 1px solid $grey400;
+  width: 350px;
+}
+
+.pairButton {
+  margin: 0 16px 0 24px;
+  position: relative;
+  top: -5px;
+}
+
+.pairDeviceContent {
+  margin-top: 22px;
+}
+
+.pairDeviceSuggestion {
+  margin-top: 4px;
+  .mainHeader {
+    font-weight: 500;
+  }
+  .leftBreakSpace {
+    margin-left: 4px;
+  }
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+@media (max-width: $breakpointLarge) {
+  .contentTable {
+    border: 0;
+    tbody {
+      tr {
+        border: 1px solid $greyHard !important;
+        box-shadow: 0 0 10px rgba(162, 176, 200, 0.31);
+        margin-bottom: 16px;
+        background: $white;
+        border-radius: 4px;
+        float: left;
+        width: 100%;
+        td {
+          width: 100%;
+          font-size: 14px;
+          float: left;
+
+        }
+        .leftRow {
+          padding: 8px 0 8px 16px;
+          border-right: 0;
+          &:before {
+            font-size: 12px;
+            content: attr(data-th);
+            display: block;
+            color: $greyLight;
+          }
+        }
+
+        .rightRow {
+          border-right: 0;
+          border-bottom: 0;
+          .pairTextBox {
+            width: 120px !important;
+          }
+        }
+      }
+
+      tr:nth-of-type(even) {
+        background: $blue100;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpointSmall) {
+  .button {
+    min-width: 100% !important;
+    margin-left: 0 !important;
+    margin-bottom: 20px;
+  }
+
+  .contentTable {
+    tbody {
+      tr {
+        .rightRow {
+          .pairTextBox {
+            width: 90% !important;
+          }
+          .pairButton {
+            margin: 0 8px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

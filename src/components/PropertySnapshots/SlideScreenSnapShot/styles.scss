@@ -1,0 +1,42 @@
+@import '../../../styles/color';
+@import '../../../styles/responsive';
+
+.orderedList{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+       li {
+           margin-bottom: 20px;
+           img {
+             cursor: pointer;
+             max-width: 85%;
+           }
+       }
+}
+
+.selectedSlide {
+    background: $greyLight900;
+}
+
+@media (min-width: $breakpointLarge) {
+    .orderedListDesktop {
+        width: inherit !important;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: $breakpointLarge) {
+    .orderedList {
+        list-style-position: inside;
+        float: left;
+        li {
+            float: left;
+            width: 150px;
+            padding-bottom: 14px;
+            margin-bottom: 0;
+            img {
+                max-width: 70%;
+            }
+        }
+    }
+}

@@ -1,0 +1,235 @@
+@import '../../../styles/color';
+@import '../../../styles/responsive';
+
+.mainContainer {
+  background: url('../../../public/rokuBG.jpg') no-repeat center center fixed;
+  padding: 30px 0;
+  font-family: 'Montserrat';
+}
+
+.textContainer {
+  padding: 20px 60px;
+
+  .containerDiv {
+    align-items: stretch;
+    margin-bottom: 30px;
+    &> div {
+      display: flex;
+    }
+  }
+
+  .boxWrapper {
+    border-radius: 4px;
+    background-color: $white;
+    box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 35px 16px 40px;
+    text-align: center;
+
+    h2 {
+      color: $black200;
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    h3 {
+      color: $black200;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    img {
+        margin: 20px 0;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.67;
+      letter-spacing: 0.2px;
+      color: $black500;
+    }
+
+    a {
+      display: inline-block;
+      margin: 20px 0;
+      img {
+        margin: 0;
+        max-width: 100px;
+      }
+    }
+
+    .benefitsLink {
+      color: $bluedark600;
+      font-size: 12px;
+      font-weight: 500;
+      margin: 14px 0 0 0;
+      position: relative;
+      padding-right: 30px;
+      i {
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        position: absolute;
+        font-size: 20px;
+        right: 0;
+      }
+    }
+
+  }
+
+  .infoContainer {
+    position: relative;
+
+    .backScreen {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      background-color: $black;
+      border-radius: 4px;
+    }
+
+    .infoScreen {
+      &:after {
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+      }
+      position: relative;
+      color: $white;
+      padding-left: 32px;
+
+      ul {
+        float: left;
+        margin: 0 20px 0 0;
+        list-style: none;
+        padding: 36px 0;
+        border-right: 1px solid $blueLight200;
+        li {
+          &:last-child {
+            padding-top: 8px;
+          }
+          float: left;
+          list-style: none;
+          margin: 0 15px 0 0;
+          font-weight: 500;
+          font-size: 12px;
+          position: relative;
+          height: 42px;
+          padding-left: 54px;
+          padding-top: 13px;
+          line-height: 1.33;
+          max-width: 300px;
+          span {
+            display: inline-block;
+            border: 1px solid $blueLight100;
+            border-radius: 50%;
+            padding: 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            i {
+              color: $bluedark800;
+              background: $grey300;
+              border-radius: 50%;
+              font-weight: 600;
+              font-size: 14px;
+              font-style: normal;
+              width: 32px;
+              height: 32px;
+              display: inline-block;
+              text-align: center;
+              padding-top: 5px;
+            }
+          }
+
+        }
+      }
+    }
+
+    .loginButtonLink {
+      text-transform: uppercase;
+      font-size: 12px;
+      min-width: 140px !important;
+      border-radius: 4px !important;
+      margin-top: 36px;
+      label {
+        background-image: linear-gradient(to right, $orange100, $orange200);
+        border-radius: 4px !important;
+      }
+      .loginButton {
+        display: block;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: $white;
+      }
+    }
+  }
+}
+
+.logoContainer {
+  text-align: center;
+}
+
+@media (max-width: $middleContentWidth) {
+  .textContainer {
+    .infoContainer {
+      .loginButtonLink {
+        margin-top: 55px;
+        position: absolute;
+        right: 56px;
+      }
+      .infoScreen {
+        ul {
+          margin: 0 0 20px 0;
+          padding: 16px 230px 0 0;
+          border: 0;
+          li {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+
+    .boxWrapper {
+      h2 {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $breakpointDesktop) {
+  .textContainer {
+    .boxWrapper {
+      h2 {
+        min-height: 94px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpointLarge) {
+  .textContainer {
+    .containerDiv {
+      margin-bottom: 20px;
+    }
+    .boxWrapper {
+      margin-bottom: 20px;
+      h2 {
+        display: block;
+        min-height: inherit;
+      }
+    }
+  }
+}

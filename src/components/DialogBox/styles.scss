@@ -1,0 +1,144 @@
+@import '../../styles/color';
+@import '../../styles/responsive';
+
+.devicePairContentClass {
+  max-width: 370px !important;
+}
+
+.devicePairBody {
+  position: relative;
+  padding: 8px 40px 44px!important;
+}
+
+.dialogHeaderStyle {
+  padding: 24px 24px 20px 38px !important;
+  font-size: 20px !important;
+}
+
+.itemKeyword {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.failure {
+  color: $error;
+}
+
+.success {
+  color: $success;
+}
+
+.messageToShowResponse {
+  margin: -8px 0 14px 0;
+}
+
+.pairButton {
+  margin: 0 16px 0 24px;
+  position: relative;
+  top: -5px;
+}
+
+.closeVideoDialog {
+  position: absolute;
+  z-index: 1;
+  font-size: 24px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.mobileContactDetails {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: $greyLight400;
+  font-family: 'Montserrat';
+  i {
+    position: absolute;
+  }
+  a, span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+    padding-left: 35px;
+    padding-top: 1px;
+  }
+}
+
+.creditsDetails {
+  font-size: 14px;
+  float: right;
+  i {
+    font-size: 20px;
+  }
+  span {
+    padding-left: 30px;
+    padding-top: 2px;
+  }
+}
+
+.videoDialogTitle {
+  font-size: 20px;
+  color: $greyDark200;
+  padding: 25px 2rem 15px;
+  font-weight: 400;
+  padding: 10px 0;
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.videoDialogDetails {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  padding-bottom: 3%;
+  color: $greyLight400;
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.linkExternal {
+  color: $blue500;
+  text-decoration: underline;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.confirmButtonSupport {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.tooltipStyle {
+  background-color: $navy !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  opacity: 1 !important;
+  padding: 8px 10px !important;
+  z-index: 1501;
+
+  &:after{
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    margin-left: -6px !important;
+  }
+}
+
+@media (max-width: $breakpointLarge) {
+  .contentClass {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: $breakpointSmall) {
+  .button {
+      min-width: 100% !important;
+      margin-left: 0 !important;
+      margin-bottom: 20px;
+  }
+}
+
