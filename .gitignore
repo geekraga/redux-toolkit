@@ -1,20 +1,38 @@
-const puppeteer = require('puppeteer');
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-async function run() {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+# dependencies
+/node_modules
 
-  await page.goto('https://www.example.com');
+# testing
+/coverage
 
-  // Get an element by its CSS selector
-  const element = await page.$('#element-id');
+# production
+/build
+/containers/.DS_Store
 
-  // Get the text content of the element
-  const text = await page.evaluate(el => el.textContent, element);
+# misc
+.DS_Store
+/containers/.DS_Store
+.vscode
+.env
+.env.development.local
+.env.test.local
+.env.production.local
 
-  console.log(`The text content of the element is: ${text}`);
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-  await browser.close();
-}
+# CSS files
+# *.css
 
-run();
+
+.idea/
+*.iml
+*.xml
+
+# IDE config ignored
+.vscode/
+package-lock.json
+yarn.lock
+.idea
